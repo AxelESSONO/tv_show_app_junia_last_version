@@ -1,4 +1,4 @@
-package com.junia.tvshowapp.view
+package com.junia.tvshowapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

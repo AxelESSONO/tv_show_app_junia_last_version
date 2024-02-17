@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TvShow App</string>
+    <string name="tv_show">tv show</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.junia.tvshowapp
+package com.junia.tvshowapp.most_popular.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

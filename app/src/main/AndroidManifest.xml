@@ -17,7 +17,7 @@
             android:name=".auth.presentation.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".TvShowActivity"
+            android:name=".most_popular.presentation.TvShowActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

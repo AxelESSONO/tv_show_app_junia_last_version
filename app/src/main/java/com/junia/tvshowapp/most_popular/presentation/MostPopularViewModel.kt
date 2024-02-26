@@ -17,8 +17,7 @@ class MostPopularViewModel @Inject constructor(
     private val mostPopularUseCase: MostPopularUseCase
 ) : ViewModel() {
 
-    private val _tvShowState: MutableStateFlow<MostPopularState> =
-        MutableStateFlow(MostPopularState())
+    private val _tvShowState: MutableStateFlow<MostPopularState> = MutableStateFlow(MostPopularState())
     var tvShowState: StateFlow<MostPopularState> = _tvShowState
 
     fun getMostPopularTvShows(page : Int) = viewModelScope.launch(Dispatchers.IO) {
@@ -26,9 +25,7 @@ class MostPopularViewModel @Inject constructor(
 
             when(resource){
                 is Resource.Error -> {
-                    _tvShowState.value = MostPopularState(
-                        error = "Unexpected error occurred"
-                    )
+                    _tvShowState.value = MostPopularState(error = "Unexpected error occurred")
                 }
                 is Resource.Loading -> {
                     _tvShowState.value = MostPopularState(isLoading = true)

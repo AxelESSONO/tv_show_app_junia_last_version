@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+      <variable
+          name="tvShow"
+          type="com.junia.tvshowapp.most_popular.domain.model.TvShow" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +61,7 @@
                 android:id="@+id/tvShowNameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arrow"
+                android:text="@{tvShow.name}"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/titleColor"
@@ -69,7 +71,7 @@
                 android:id="@+id/tvShowNetworkCountryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The CW (US)"
+                android:text="@{tvShow.network}"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 android:textColor="@color/networkCountryColor"
@@ -79,7 +81,7 @@
                 android:id="@+id/tvShowStartedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Started on 2012-10-10"
+                android:text="@{tvShow.startDate}"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 android:textColor="@color/startedColor"
@@ -89,7 +91,7 @@
                 android:id="@+id/tvShowEndedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ended"
+                android:text="@{tvShow.status}"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 android:textColor="@color/endedColor"

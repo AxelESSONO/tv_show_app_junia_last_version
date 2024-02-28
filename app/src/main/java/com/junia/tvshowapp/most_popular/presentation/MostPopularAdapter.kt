@@ -33,8 +33,8 @@ class MostPopularAdapter(
     override fun getItemCount(): Int = tvShowList.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun loadData(tvShows : MutableList<TvShow>){
-        this.tvShowList = tvShows
+    fun loadData(tvShows: List<TvShow>){
+        this.tvShowList = tvShows.toMutableList()
         notifyDataSetChanged()
     }
 

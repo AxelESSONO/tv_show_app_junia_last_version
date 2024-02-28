@@ -13,6 +13,21 @@
        android:background="@color/backgroundColor"
        tools:context=".most_popular.presentation.TvShowActivity">
 
+      <com.google.android.material.progressindicator.CircularProgressIndicator
+          android:id="@+id/progressCircular"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:elevation="10dp"
+          android:visibility="visible"
+          app:trackThickness="10dp"
+          android:indeterminate="true"
+          app:indicatorSize="50dp"
+          app:indicatorColor="@color/networkCountryColor"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"/>
+
       <com.google.android.material.appbar.MaterialToolbar
           android:id="@+id/tvShowMostPopularToolbar"
           android:layout_width="match_parent"
@@ -38,6 +53,7 @@
           android:id="@+id/tvShowMostPopularNested"
           android:layout_width="match_parent"
           android:layout_height="0dp"
+          android:visibility="gone"
           app:layout_constraintTop_toBottomOf="@id/tvShowMostPopularToolbar">
 
          <androidx.recyclerview.widget.RecyclerView

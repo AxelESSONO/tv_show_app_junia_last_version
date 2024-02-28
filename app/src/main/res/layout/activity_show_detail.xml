@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="tvShow"
+            type="com.junia.tvshowapp.most_popular.domain.model.TvShow" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context=".show_details.presentation.ShowDetailActivity">
+
+        <ImageView
+            android:id="@+id/tvShowImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/arrow"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvShowImageDetail">
+
+            <TextView
+                android:id="@+id/tvShowNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{tvShow.name}"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/titleColor"
+                android:fontFamily="@font/ubuntu_bold" />
+
+            <TextView
+                android:id="@+id/tvShowNetworkCountryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{tvShow.network}"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:textColor="@color/networkCountryColor"
+                android:fontFamily="@font/ubuntu_regular" />
+
+            <TextView
+                android:id="@+id/tvShowStartedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{tvShow.startDate}"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:textColor="@color/startedColor"
+                android:fontFamily="@font/ubuntu_medium" />
+
+            <TextView
+                android:id="@+id/tvShowEndedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{tvShow.status}"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:textColor="@color/endedColor"
+                android:fontFamily="@font/ubuntu_medium" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
